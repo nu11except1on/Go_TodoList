@@ -1,7 +1,9 @@
 package models
 
-type Status struct {
-	NEW           string
-	IN_INPROGRESS string
-	DONE          string
-}
+type Status string
+
+const (
+	StatusNew        Status = "NEW"
+	StatusInProgress        = "IN_PROGRESS"
+	StatusDone              = "DONE"
+)

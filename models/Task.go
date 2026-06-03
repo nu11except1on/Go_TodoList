@@ -34,7 +34,7 @@ func (t Task) Description() string {
 	return t.description
 }
 
-func (t *Task) SetDescriptrion(description string) error {
+func (t *Task) SetDescription(description string) error {
 	if len(description) == 0 {
 		return errors.New("Empty description")
 	}
@@ -42,7 +42,7 @@ func (t *Task) SetDescriptrion(description string) error {
 	return nil
 }
 
-func (t Task) Id() int {
+func (t Task) ID() int {
 	return t.id
 }
 
