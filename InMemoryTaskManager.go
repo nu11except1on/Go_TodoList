@@ -53,3 +53,14 @@ func (m *InMemoryTaskManager) UpdateTask(id int, newTitle string, newDescription
 	}
 	return nil
 }
+
+func (m *InMemoryTaskManager) UpdateTaskStatus(id int, newStatus string) error {
+	task, exists := m.taskHashMap[id]
+	if !exists {
+		return errors.New("task not found")
+	}
+	if err := task.SetStatus(models.Status(newStatus)); err != nil {
+		return err
+	}
+	return nil
+}
