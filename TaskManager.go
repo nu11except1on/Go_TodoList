@@ -10,4 +10,6 @@ type TaskManager interface {
 	DeleteTask(id int) error
 
 	UpdateTask(id int, newTitle string, newDescription string) error
+
+	UpdateTaskStatus(id int, newStatus string) error
 }
